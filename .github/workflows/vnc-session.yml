@@ -43,6 +43,9 @@ jobs:
 
       - name: Install ngrok
         run: brew install --cask ngrok
+        env:
+          HOMEBREW_NO_REQUIRE_TAP_TRUST: 1
+          HOMEBREW_NO_INSTALL_CLEANUP: 1
 
       - name: Configure ngrok
         env:

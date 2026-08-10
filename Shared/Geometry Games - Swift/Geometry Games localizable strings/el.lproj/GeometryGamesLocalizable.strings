@@ -1,0 +1,21 @@
+//	GeometryGamesLocalizable.strings (el)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+"Image size"				= "Μέγεθος εικόνας";
+"Transparent background"	= "Διαφανές φόντο";
+"Save"						= "Αποθήκευση";
+"Copy"						= "Αντιγραφή";
+
+//	Help menu
+"Contact"		= "Επικοινωνία";
+"Translators"	= "Μεταφραστές";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "Έχετε ερωτήσεις;\nΕπικοινωνήστε";
+"Contact-Questions"		= "με τον Jeff Weeks";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "Βρείτε περισσότερα στο";
+"Contact-MoreAppsPost"	= "";

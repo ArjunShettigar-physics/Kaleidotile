@@ -1,0 +1,21 @@
+//	GeometryGamesLocalizable.strings (ru)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+"Image size"				= "Размер";	//	or "Размер изображения", but that seems too long
+"Transparent background"	= "Прозрачный фон";
+"Save"						= "Сохранить";
+"Copy"						= "Скопировать";
+
+//	Help menu
+"Contact"		= "Контакт";
+"Translators"	= "Переводчики";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "Вопросы?\nОбращайтесь к";
+"Contact-Questions"		= "Джефу Виксу";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "Коллекция геометрических игр\nи приложений доступна на сайте";
+"Contact-MoreAppsPost"	= "";

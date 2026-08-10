@@ -1,0 +1,22 @@
+//	GeometryGamesLocalizable.strings (zh-Hans)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+"Image size"				= "图像尺寸";
+"Transparent background"	= "透明背景";
+"Save"						= "存储";	//	This is Apple's zh-CN term,
+										//	which differs from their zh-TW term
+"Copy"						= "拷贝";
+
+//	Help menu
+"Contact"		= "联系方式";
+"Translators"	= "译者";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "如有问题，请联系：";
+"Contact-Questions"		= "韦杰夫";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "更多应用程序，请访问";
+"Contact-MoreAppsPost"	= "";

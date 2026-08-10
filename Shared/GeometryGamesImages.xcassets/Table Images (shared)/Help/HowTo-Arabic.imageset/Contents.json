@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Help-Help-HowTo-Arabic.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Help-Help-HowTo-Arabic@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Help-Help-HowTo-Arabic@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

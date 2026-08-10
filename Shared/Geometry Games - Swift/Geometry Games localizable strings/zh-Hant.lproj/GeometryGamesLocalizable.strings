@@ -1,0 +1,33 @@
+//	GeometryGamesLocalizable.strings (zh-Hant)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+//
+//		Note:  The page
+//
+//			https://fujifilm-dsc.com/zht/manual/x30/menu_shooting/image_size/index.html
+//
+//		translates "Image" as 影像 rather than 圖像.
+//		So I could consider doing the same here,
+//		but I'm not going to do this without consulting
+//		a native speaker.
+//
+"Image size"				= "圖像尺寸";
+"Transparent background"	= "透明背景";
+"Save"						= "儲存";	//	This is Apple's zh-TW term,
+									//	which differs from their zh-CN term
+"Copy"						= "拷貝";
+
+
+//	Help menu
+"Contact"		= "聯繫方式";
+"Translators"	= "譯者";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "如有問題，請聯繫：";
+"Contact-Questions"		= "韋傑夫";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "更多應用程序，請訪問";
+"Contact-MoreAppsPost"	= "";

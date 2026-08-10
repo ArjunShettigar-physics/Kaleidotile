@@ -1,0 +1,27 @@
+//	GeometryGamesLocalizable.strings (pl)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Export panel
+"Export"					= "Eksport";
+"Image size"				= "Rozmiar obrazu";
+"Transparent background"	= "Przezroczyste tło";
+"Save Image"				= "Zachowaj obraz";
+"Copy Image"				= "Kopiuj obraz";
+"Untitled"					= "Bez nazwy";
+"Exported images"			= "Eksportowane obrazy";
+
+//	Help menu
+"Contact"		= "Kontakt";
+"Translators"	= "Tłumacze";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "Pytania?";
+"Contact-Questions"		= "Napisz do Jeff'a Weeks";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "Więcej aplikacji dostępnych na";
+"Contact-MoreAppsPost"	= "";
+
+//	Multi-touch gestures on macOS
+//STILL NEED TO TRANSLATE MULTI-TOUCH INSTRUCTIONS

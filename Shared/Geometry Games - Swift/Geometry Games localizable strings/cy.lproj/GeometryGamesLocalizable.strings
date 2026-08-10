@@ -1,0 +1,23 @@
+//	GeometryGamesLocalizable.strings (cy)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+"Image size"				= "Maint y ddelwedd";
+"Transparent background"	= "Cefndir tryloyw";
+"Save"						= "Cadw";
+"Copy"						= "Copïo";
+
+//	Help menu
+"Contact"		= "Cyswllt";
+"Translators"	= "Cyfieithwyr";
+
+//	Contact panel
+//	<Questions?> is better translated as <Cwestiynau?>,
+//	while <Enquiries?> would translate as <Ymholiadau?>
+"Contact-QuestionsPre"	= "Cwestiynau?";
+"Contact-Questions"		= "Cysylltwch â Jeff Weeks";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "Mwy o apiau ar gael yma";
+"Contact-MoreAppsPost"	= "";

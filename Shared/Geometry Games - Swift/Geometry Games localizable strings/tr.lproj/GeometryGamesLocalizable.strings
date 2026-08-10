@@ -1,0 +1,39 @@
+//	GeometryGamesLocalizable.strings (tr)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Export panel
+"Export"					= "Aktar";
+"Image size"				= "Görüntü boyutu";
+"Transparent background"	= "Şeffaf arka plan";
+"Save Image"				= "Görüntüyü Kaydet";
+"Copy Image"				= "Görüntüyü Kopyala";
+"Untitled"					= "Adsız";
+"Exported images"			= "Aktarılan görüntüler";
+	//	Osman wrote "Indirilen görüntüler",
+	//	but that seems to mean "Downloaded images",
+	//	which isn't quite right in this context.
+	//	Apple's TextEdit app, when running in Turkish,
+	//	translates "Export as PDF…" to
+	//	"PDF Olarak Dışa Aktar…", so in principle
+	//	"Dışa aktarılan görüntüler" (literally
+	//	"Externally transferred images") would be correct.
+	//	But it seems a bit long for a folder name.
+	//	So I'll go with "Aktarılan görüntüler"
+	//	("Transferred images") and hope that sounds good.
+
+
+//	Help menu
+"Contact"		= "İletişim";
+"Translators"	= "Çevirmenler";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "Sorularınız mı var?";
+"Contact-Questions"		= "Jeff Weeks";
+"Contact-QuestionsPost"	= "ile iletişim kurabilirsiniz";
+"Contact-MoreAppsPre"	= "Daha fazla uygulamayı\nşu adreste bulabilirsiniz:";
+"Contact-MoreAppsPost"	= "";
+
+//	Multi-touch gestures on macOS
+//STILL NEED TO TRANSLATE MULTI-TOUCH INSTRUCTIONS

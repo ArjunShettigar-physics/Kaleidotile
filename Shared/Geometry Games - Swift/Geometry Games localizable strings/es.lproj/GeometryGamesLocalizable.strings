@@ -1,0 +1,25 @@
+//	GeometryGamesLocalizable.strings (es)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+
+//	Cristóbal says that "Tamaño imagen" sounds poor,
+//	but "Tamaño de imagen" sounds good, as an implicit
+//	shortening of "Tamaño de cada imagen".
+"Image size"				= "Tamaño de imagen";
+"Transparent background"	= "Fondo transparente";
+"Save"						= "Guardar";
+"Copy"						= "Copiar";
+
+//	Help menu
+"Contact"		= "Contacto";
+"Translators"	= "Traductores";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "Dudas?";
+"Contact-Questions"		= "Contacta Jeff Weeks";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "Más aplicaciones disponibles en";	//	"apps" is OK too, but implies mobile
+"Contact-MoreAppsPost"	= "";

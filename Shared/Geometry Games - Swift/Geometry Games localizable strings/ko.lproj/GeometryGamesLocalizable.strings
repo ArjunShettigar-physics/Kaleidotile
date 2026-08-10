@@ -1,0 +1,21 @@
+//	GeometryGamesLocalizable.strings (ko)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+"Image size"				= "이미지 크기";
+"Transparent background"	= "투명 배경";
+"Save"						= "저장";
+"Copy"						= "복사";
+
+//	Help menu
+"Contact"		= "연락처";
+"Translators"	= "번역기";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "";
+"Contact-Questions"		= "저 Jeff Weeks 는";
+"Contact-QuestionsPost"	= "어떤 질문도 환영합니다";
+"Contact-MoreAppsPre"	= "앱 더 보기";
+"Contact-MoreAppsPost"	= "";

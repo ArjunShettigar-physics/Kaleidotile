@@ -1,0 +1,21 @@
+//	GeometryGamesLocalizable.strings (fi)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+"Image size"				= "Kuvakoko";
+"Transparent background"	= "Läpinäkyvä tausta";
+"Save"						= "Tallenna";
+"Copy"						= "Kopioi";
+
+//	Help menu
+"Contact"		= "Yhteys";	//	or "Yhteyshenkilö"
+"Translators"	= "Kääntäjät";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "Kysymyksiä?";
+"Contact-Questions"		= "Ota yhteys Jeff Weeks";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "Lisää äppejä osoitteesta";
+"Contact-MoreAppsPost"	= "";

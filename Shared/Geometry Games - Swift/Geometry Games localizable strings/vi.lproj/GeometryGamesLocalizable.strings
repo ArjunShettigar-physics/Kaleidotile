@@ -1,0 +1,21 @@
+//	GeometryGamesLocalizable.strings (vi)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+"Image size"				= "Kích cỡ hình ảnh";
+"Transparent background"	= "Nền trong suốt";
+"Save"						= "Lưu";
+"Copy"						= "Sao chép";
+
+//	Help menu
+"Contact"		= "Liên lạc";
+"Translators"	= "Các dịch giả";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "Thắc mắc xin gửi đến";
+"Contact-Questions"		= "giáo sư Jeff Weeks";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "Tham khảo những ứng dụng khác tại";
+"Contact-MoreAppsPost"	= "";

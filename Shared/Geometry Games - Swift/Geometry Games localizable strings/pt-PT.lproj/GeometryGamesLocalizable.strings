@@ -1,0 +1,21 @@
+//	GeometryGamesLocalizable.strings (pt-PT)
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	Share panel
+"Image size"				= "Tamanho de imagem";
+"Transparent background"	= "Fundo transparente";
+"Save"						= "Guardar";
+"Copy"						= "Copiar";
+
+//	Help menu
+"Contact"		= "Contacto";
+"Translators"	= "Tradutores";
+
+//	Contact panel
+"Contact-QuestionsPre"	= "Questões?";
+"Contact-Questions"		= "Contacta Jeff Weeks";
+"Contact-QuestionsPost"	= "";
+"Contact-MoreAppsPre"	= "Mais aplicações disponíveis em";
+"Contact-MoreAppsPost"	= "";

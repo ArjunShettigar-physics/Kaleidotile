@@ -1,0 +1,93 @@
+name: Build KaleidoTile
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      p:
+        description: 'p (first symmetry order)'
+        required: false
+        default: '18'
+      q:
+        description: 'q (second symmetry order)'
+        required: false
+        default: '2'
+      r:
+        description: 'r (third symmetry order)'
+        required: false
+        default: '4'
+      pan_distance:
+        description: 'Hyperbolic distance to pan the camera (0 = no pan)'
+        required: false
+        default: '4.0'
+      pan_angle_degrees:
+        description: 'Direction to pan in, degrees (0-360)'
+        required: false
+        default: '0'
+      image_size_px:
+        description: 'Output image size in pixels (square)'
+        required: false
+        default: '2048'
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version being used
+        run: xcodebuild -version
+
+      - name: Build the app (macOS target, signing disabled for CI)
+        run: |
+          xcodebuild \
+            -project "03 KaleidoTile/Source - SwiftUI/KaleidoTile.xcodeproj" \
+            -scheme KaleidoTile \
+            -destination "platform=macOS" \
+            -configuration Debug \
+            -derivedDataPath ./DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Render a screenshot of the requested tiling
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          KALEIDOTILE_CI_SCREENSHOT: "1"
+          KALEIDOTILE_P: ${{ github.event.inputs.p }}
+          KALEIDOTILE_Q: ${{ github.event.inputs.q }}
+          KALEIDOTILE_R: ${{ github.event.inputs.r }}
+          KALEIDOTILE_PAN_DISTANCE: ${{ github.event.inputs.pan_distance }}
+          KALEIDOTILE_PAN_ANGLE_DEGREES: ${{ github.event.inputs.pan_angle_degrees }}
+          KALEIDOTILE_IMAGE_SIZE_PX: ${{ github.event.inputs.image_size_px }}
+          KALEIDOTILE_SCREENSHOT_PATH: ${{ github.workspace }}/kaleidotile-screenshot.png
+        run: |
+          APP_BINARY="./DerivedData/Build/Products/Debug/KaleidoTile.app/Contents/MacOS/KaleidoTile"
+          echo "Looking for app binary at: $APP_BINARY"
+          ls -la "./DerivedData/Build/Products/Debug/"
+
+          # The app renders offscreen (no window/screen dependency) and
+          # calls exit() itself once it has written the PNG, so this
+          # just runs it to completion. The outer `timeout` is a safety
+          # net in case something unexpected hangs.
+          timeout 90 "$APP_BINARY" || EXIT_CODE=$?
+
+          echo "App exited with code: ${EXIT_CODE:-0}"
+
+          if [ -f "kaleidotile-screenshot.png" ]; then
+            echo "Screenshot file found:"
+            ls -la kaleidotile-screenshot.png
+          else
+            echo "ERROR: no screenshot file was produced."
+            exit 1
+          fi
+
+      - name: Upload screenshot
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: kaleidotile-screenshot
+          path: kaleidotile-screenshot.png
+          if-no-files-found: error

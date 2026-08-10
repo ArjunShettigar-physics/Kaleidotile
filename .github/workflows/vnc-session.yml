@@ -1,0 +1,70 @@
+name: Interactive macOS Session (VNC)
+
+# Manually triggered only (Actions tab -> this workflow -> "Run workflow").
+# Opens a real, full-featured macOS desktop session you can remote into
+# from your Linux laptop and use exactly like a real Mac: run Xcode,
+# build, run the actual KaleidoTile app, drag/pan the tiling, etc.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  vnc-session:
+    runs-on: macos-15
+    timeout-minutes: 240   # hard safety ceiling; the sleep below is what actually paces the session
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Enable Screen Sharing (VNC) and set the password
+        env:
+          VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+        run: |
+          set -e
+          KICKSTART="/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart"
+
+          sudo "$KICKSTART" -configure -allowAccessFor -allUsers -privs -all
+          sudo "$KICKSTART" -configure -clientopts -setvnclegacy -vnclegacy yes
+          sudo "$KICKSTART" -configure -clientopts -setvncpw -vncpw "$VNC_PASSWORD"
+
+          # Fallback: also write the legacy VNC password file directly.
+          # NOTE: the VNC/RFB password scheme only uses the first 8 characters.
+          echo "$VNC_PASSWORD" | perl -we '
+            BEGIN { @k = unpack "C*", pack "H*", "1734516E8BA8C5E2FF1C39567390ADCA" }
+            $_ = <>; chomp; s/^(.{8}).*/$1/;
+            @p = unpack "C*", $_;
+            foreach (@k) { printf "%02X", $_ ^ (shift @p || 0) }
+            print "\n"
+          ' | sudo tee /Library/Preferences/com.apple.VNCSettings.txt > /dev/null
+
+          sudo "$KICKSTART" -restart -agent -console
+          sudo "$KICKSTART" -activate
+
+      - name: Install ngrok
+        run: brew install --cask ngrok
+
+      - name: Configure ngrok
+        env:
+          NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
+        run: ngrok config add-authtoken "$NGROK_AUTHTOKEN"
+
+      - name: Open the KaleidoTile project in Xcode
+        run: open "03 KaleidoTile/Source - SwiftUI/KaleidoTile.xcodeproj"
+
+      - name: Start the VNC tunnel and print the connection address
+        run: |
+          nohup ngrok tcp 5900 --log=stdout > /tmp/ngrok.log 2>&1 &
+          sleep 8
+          echo "=================================================================="
+          echo "CONNECT WITH A VNC CLIENT TO THE ADDRESS BELOW:"
+          curl -s http://127.0.0.1:4040/api/tunnels \
+            | python3 -c "import sys,json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])"
+          echo "Password: the VNC_PASSWORD secret you set (only first 8 characters count)"
+          echo "=================================================================="
+
+      - name: Keep session alive (cancel this workflow run when you're done)
+        run: |
+          echo "Session will stay open for up to 3 hours, or until you click"
+          echo "'Cancel workflow' on this Actions run page."
+          sleep 10800

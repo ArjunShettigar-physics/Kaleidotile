@@ -43,9 +43,6 @@ jobs:
 
       - name: Install ngrok
         run: brew install --cask ngrok
-        env:
-          HOMEBREW_NO_REQUIRE_TAP_TRUST: 1
-          HOMEBREW_NO_INSTALL_CLEANUP: 1
 
       - name: Configure ngrok
         env:
@@ -57,12 +54,41 @@ jobs:
 
       - name: Start the VNC tunnel and print the connection address
         run: |
+          set -e
           nohup ngrok tcp 5900 --log=stdout > /tmp/ngrok.log 2>&1 &
-          sleep 8
+          NGROK_PID=$!
+
+          echo "Waiting for ngrok tunnel to come up..."
+          PUBLIC_URL=""
+          for i in $(seq 1 30); do
+            if ! kill -0 "$NGROK_PID" 2>/dev/null; then
+              echo "ngrok process exited early. Log output:"
+              cat /tmp/ngrok.log
+              exit 1
+            fi
+
+            RESPONSE=$(curl -s http://127.0.0.1:4040/api/tunnels || true)
+            if [ -n "$RESPONSE" ]; then
+              PUBLIC_URL=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['tunnels'][0]['public_url'] if d.get('tunnels') else '')" 2>/dev/null || true)
+            fi
+
+            if [ -n "$PUBLIC_URL" ]; then
+              break
+            fi
+
+            echo "  still waiting... ($i/30)"
+            sleep 2
+          done
+
+          if [ -z "$PUBLIC_URL" ]; then
+            echo "Timed out waiting for ngrok tunnel. Full ngrok log:"
+            cat /tmp/ngrok.log
+            exit 1
+          fi
+
           echo "=================================================================="
           echo "CONNECT WITH A VNC CLIENT TO THE ADDRESS BELOW:"
-          curl -s http://127.0.0.1:4040/api/tunnels \
-            | python3 -c "import sys,json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])"
+          echo "$PUBLIC_URL"
           echo "Password: the VNC_PASSWORD secret you set (only first 8 characters count)"
           echo "=================================================================="
 

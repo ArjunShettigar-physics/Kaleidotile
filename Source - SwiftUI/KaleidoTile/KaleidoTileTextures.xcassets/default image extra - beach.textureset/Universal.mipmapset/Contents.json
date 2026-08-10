@@ -1,0 +1,12 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "levels" : [
+    {
+      "filename" : "default image extra - beach.jpg",
+      "mipmap-level" : "base"
+    }
+  ]
+}

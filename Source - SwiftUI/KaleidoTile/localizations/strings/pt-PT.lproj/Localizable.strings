@@ -1,0 +1,82 @@
+//	Program:
+//		KaleidoTile
+//
+//	Language:
+//		Português
+//		Portuguese
+//
+//	Translator:
+//		Atractor (www.atractor.pt)
+//
+//	Date:
+//		October 2007
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "Simetria";
+"Triangle group △(%lld, %lld, %lld)"		= "Grupo triangular △(%lld, %lld, %lld)";
+"Other triangle group"					= "Outro grupo triangular";
+"Style"									= "Estilo";
+"Polyhedron"							= "Poliedro";
+"Tiling of sphere"    					= "Pavimentação da esfera";
+"Tiling of Euclidean plane"				= "Pavimentação do plano euclidiano";
+"Tiling of hyperbolic plane"			= "Pavimentação do plano hiperbólico";
+
+//	FacesView
+"Decoration"	= "Decoração";
+"Face A"		= "Face A";
+"Face B"		= "Face B";
+"Face C"		= "Face C";
+"Background"	= "Fundo";
+
+//	FaceDecorationView
+"Solid Color 1"				= "Cor sólida";		//	one line only
+"Solid Color 2"				= "Cor\nsólida";	//	two lines, if appropriate
+"Image from Camera"			= "Imagem da\ncâmara";
+"Image from Photo Library"	= "Imagem da\ncoleção de fotos";
+	//	"Imagem da\ncoleção de\nfotografias" took too many lines.
+	//	Manuel says "Yes, you may choose "fotos" instead of "fotografias"; no problem."
+"Image from Files"			= "Imagem de\nficheiros";
+"Paste Image"				= "Colar\nimagem";
+"Previous Image"			= "Imagem\nanterior";
+"Invisible"					= "Invisível";
+
+//	Background texture names
+"Sky"		= "Céu";
+"Wood"		= "Madeira";
+"Grass"		= "Relva";	//	"grama" is the Brazilian term
+"Sand"		= "Areia";
+"Stone"		= "Pedra";
+"Tatami"	= "Tatame";	//	o "tatami" o "tatâme"   See
+	//	https://www.portuguescomgabi.com.br/2016/01/tatame-ou-tatami.html
+"Moss"		= "Musgo";
+"Water"		= "Água";
+"Straw"		= "Palha";
+
+//	OptionsView
+"Show Plain Images"				= "Mostrar as imagens diretas";
+"Show Reflected Images"			= "Mostrar as imagens refletidas";
+"Cut Along Mirror Lines"		= "Cortar ao longo das linhas-espelho";
+"Snap to Archimedean Solids"	= "Ajustar para sólidos Arquimedeanos";
+"Sound Effects"					= "Efeitos sonoros";
+"Inertia"						= "Inércia";
+
+//	Archimedean polyhedra names
+"cube"							= "Cubo";
+"cuboctahedron"					= "Cuboctaedro";
+"dodecahedron"					= "Dodecaedro";
+"icosahedron"					= "Icosaedro";
+"icosidodecahedron"				= "Icosidodecaedro";
+"octahedron"					= "Octaedro";
+"rhombicosidodecahedron"		= "Rombicosidodecaedro";
+"rhombicuboctahedron"			= "Rombicuboctaedro";
+"truncated cuboctahedron"		= "Cuboctaedro truncado";
+"truncated icosidodecahedron"	= "Icosidodecaedro truncado";
+"tetrahedron"					= "Tetraedro";
+"truncated cube"				= "Cubo truncado";
+"truncated dodecahedron"		= "Dodecaedro truncado";
+"truncated icosahedron"			= "Icosaedro truncado";
+"truncated octahedron"			= "Octaedro truncado";
+"truncated tetrahedron"			= "Tetraedro truncadon";

@@ -1,0 +1,28 @@
+As well as thanking the translators (whose names appear
+in KaleidoTile’s "Thanks" panel) I would also like to thank
+
+  • the people who read the names of the Archimedean polyhedra
+  
+        Étienne Ghys
+        南崎梓 (Azusa Minamizaki)
+        Atractor (www.atractor.pt)
+  
+  • the web site oneodddude.net, which generously made available
+    the graphics for
+
+        Moss.rgba
+        Stones.rgba
+        Grass.rgba
+
+  • the web site neilkemp.us, which generously made available
+    the graphics for
+    
+        Sand.rgba
+        Straw.rgba
+
+  • Michael Maggs for the mushroom image
+        The original photo as well as the license appear at
+        http://en.wikipedia.org/wiki/Image:Amanita_muscaria_(fly_agaric).JPG .
+
+The remaining textures are from the collection Just Textures,
+which I bought commercially many years ago.

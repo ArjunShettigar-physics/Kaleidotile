@@ -1,0 +1,79 @@
+//	Program:
+//		KaleidoTile
+//
+//	Language:
+//		Deutsch
+//		German
+//
+//	Translator:
+//		Stas Drisner
+//
+//	Date:
+//		January 2024
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "Symmetrie";
+"Triangle group △(%lld, %lld, %lld)"		= "Dreiecksgruppe △(%lld, %lld, %lld)";
+"Other triangle group"					= "Andere Dreiecksgruppe";
+"Style"									= "Stil";
+"Polyhedron"							= "Polyeder";
+"Tiling of sphere"    					= "Parkettierung der Kugel";
+"Tiling of Euclidean plane"				= "Parkettierung der euklidischen Ebene";
+"Tiling of hyperbolic plane"			= "Parkettierung der hyperbolischen Ebene";
+
+//	FacesView
+"Decoration"	= "Dekoration";
+"Face A"		= "Fläche A";
+"Face B"		= "Fläche B";
+"Face C"		= "Fläche C";
+"Background"	= "Hintergrund";
+
+//	FaceDecorationView
+"Solid Color 1"				= "Einfarbig";	//	one line only
+"Solid Color 2"				= "Einfarbig";	//	two lines, if appropriate
+"Image from Camera"			= "Bild von\nder Kamera";
+"Image from Photo Library"	= "Bild von der\nFotomediathek";
+"Image from Files"			= "Bild von\nden Dateien";
+"Paste Image"				= "Bild\neinfügen";
+"Previous Image"			= "Vorheriges\nBild";
+"Invisible"					= "Unsichtbar";
+
+//	Background texture names
+"Sky"		= "Himmel";
+"Wood"		= "Holz";
+"Grass"		= "Rasen";
+"Sand"		= "Sand";
+"Stone"		= "Gestein";
+"Tatami"	= "Tatami";
+"Moss"		= "Moos";
+"Water"		= "Wasser";
+"Straw"		= "Stroh";
+
+//	OptionsView
+"Show Plain Images"				= "Einfache Bilder anzeigen";
+"Show Reflected Images"			= "Reflektierte Bilder anzeigen";
+"Cut Along Mirror Lines"		= "Entlang der Spiegellinien schneiden";
+"Snap to Archimedean Solids"	= "Zu archimedischen Körpern einrasten";
+"Sound Effects"					= "Sound-Effekte";
+"Inertia"						= "Trägheit";
+
+//	Archimedean polyhedra names
+"cube"							= "Würfel";
+"cuboctahedron"					= "Kuboktaeder";
+"dodecahedron"					= "Dodekaeder";
+"icosahedron"					= "Ikosaeder";
+"icosidodecahedron"				= "Ikosidodekaeder";
+"octahedron"					= "Oktaeder";
+"rhombicosidodecahedron"		= "Rhombenikosidodekaeder";
+"rhombicuboctahedron"			= "Rhombenkuboktaeder";
+"truncated cuboctahedron"		= "Kuboktaederstumpf";
+"truncated icosidodecahedron"	= "Ikosidodekaederstumpf";
+"tetrahedron"					= "Tetraeder";
+"truncated cube"				= "Hexaederstumpf";
+"truncated dodecahedron"		= "Dodekaederstumpf";
+"truncated icosahedron"			= "Ikosaederstumpf";
+"truncated octahedron"			= "Oktaederstumpf";
+"truncated tetrahedron"			= "Tetraederstumpf";

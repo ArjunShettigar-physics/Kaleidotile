@@ -1,0 +1,80 @@
+//	Program:
+//		KaleidoTile
+//
+//	Language:
+//		Italiano
+//		Italian
+//
+//	Translator:
+//		Angelo Contardi
+//
+//	Date:
+//		June 2010
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "Simmetria";
+"Triangle group △(%lld, %lld, %lld)"		= "Gruppo triangolare △(%lld, %lld, %lld)";
+"Other triangle group"					= "Altro gruppo triangolare";
+"Style"									= "Stile";
+"Polyhedron"							= "Poliedro";
+"Tiling of sphere"    					= "Pavimentazione della sfera";
+"Tiling of Euclidean plane"				= "Pavimentazione del piano euclideo";
+"Tiling of hyperbolic plane"			= "Pavimentazione del piano iperbolico";
+
+//	FacesView
+"Decoration"	= "Decorazione";
+"Face A"		= "Faccia A";
+"Face B"		= "Faccia B";
+"Face C"		= "Faccia C";
+"Background"	= "Sfondo";
+
+//	FaceDecorationView
+"Solid Color 1"				= "Tinta unita";	//	one line only
+"Solid Color 2"				= "Tinta\nunita";	//	two lines, if appropriate
+"Image from Camera"			= "Fotocamera";		// "Immagine dalla\nfotocamera";
+"Image from Photo Library"	= "Foto";			// "Immagine dalla\nLibreria foto";
+"Image from Files"			= "Sfoglia file";	// "Immagine\nda un file";
+"Paste Image"				= "Incolla\nimmagine";
+"Previous Image"			= "Immagine\nprecedente";
+"Invisible"					= "Invisibile";
+
+//	Background texture names
+"Sky"		= "Cielo";
+"Wood"		= "Legno";
+"Grass"		= "Erba";
+"Sand"		= "Sabbia";
+"Stone"		= "Pietra";
+"Tatami"	= "Tatami";
+"Moss"		= "Muschio";
+"Water"		= "Acqua";
+"Straw"		= "Paglia";
+
+//	OptionsView
+"Show Plain Images"				= "Mostra immagini originali";
+"Show Reflected Images"			= "Mostra immagini riflesse";
+"Cut Along Mirror Lines"		= "Mostra linee di riflessione";
+"Snap to Archimedean Solids"	= "Approssima al solido di Archimede";
+"Sound Effects"					= "Effetti sonori";
+"Inertia"						= "Inerzia";
+
+//	Archimedean polyhedra names
+// Italian reference: https://it.wikipedia.org/wiki/Poliedri_archimedei
+"cube"							= "Cubo";
+"cuboctahedron"					= "Cubottaedro";
+"dodecahedron"					= "Dodecaedro";
+"icosahedron"					= "Icosaedro";
+"icosidodecahedron"				= "Icosidodecaedro";
+"octahedron"					= "Ottaedro";
+"rhombicosidodecahedron"		= "Rombicosidodecaedro";
+"rhombicuboctahedron"			= "Rombicubottaedro";
+"truncated cuboctahedron"		= "Cubottaedro troncato";
+"truncated icosidodecahedron"	= "Icosidodecaedro troncato";
+"tetrahedron"					= "Tetraedro";
+"truncated cube"				= "Cubo troncato";
+"truncated dodecahedron"		= "Dodecaedro troncato";
+"truncated icosahedron"			= "Icosaedro troncato";
+"truncated octahedron"			= "Ottaedro troncato";
+"truncated tetrahedron"			= "Tetraedro troncato";

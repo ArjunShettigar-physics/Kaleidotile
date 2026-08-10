@@ -1,0 +1,88 @@
+//	Program:
+//		KaleidoTile
+//
+//	Language:
+//		Français
+//		French
+//
+//	Translator:
+//		Jean-Michel Celibert
+//
+//	Date:
+//		April 2007
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "Symétrie";
+"Triangle group △(%lld, %lld, %lld)"		= "Groupe de triangle △(%lld, %lld, %lld)";
+"Other triangle group"					= "Autre groupe de triangle";
+"Style"									= "Style";
+"Polyhedron"							= "Polyèdre";
+"Tiling of sphere"    					= "Pavage de la sphère";
+"Tiling of Euclidean plane"				= "Pavage du plan euclidien";
+"Tiling of hyperbolic plane"			= "Pavage du plan hyperbolique";
+
+//	FacesView
+"Decoration"	= "Décoration";
+"Face A"		= "Face A";
+"Face B"		= "Face B";
+"Face C"		= "Face C";
+"Background"	= "Arrière-plan";
+
+//	FaceDecorationView
+"Solid Color 1"				= "Couleur solide";		//	one line only
+"Solid Color 2"				= "Couleur\nsolide";	//	two lines, if appropriate
+"Image from Camera"			= "Image depuis\nl'appareil photo";
+"Image from Photo Library"	= "Image depuis la\nphotothèque";
+"Image from Files"			= "Image depuis\nun fichier";
+	//	On the one hand, the page
+	//		https://www.gymglish.com/en/frantastique/french-grammar/de-vs-depuis
+	//	implies that using "depuis" with this meaning is proscribed.
+	//	On the other hand, the page
+	//		https://forum.wordreference.com/threads/fr-de-depuis-à-partir-de-lieu-ou-moment.774134/
+	//	says that, in spite of the rules of the Académie française, "depuis" is
+	//	very much used with this meaning to resolve potential ambiguities like
+	//		"prendre une photo de la montagne" = "prendere una foto della montagna"
+	//	vs. "prendre une photo de la montagne" = "prendere una foto dalla montagna"
+"Paste Image"				= "Coller\nimage";
+"Previous Image"			= "Image\nprécédente";
+"Invisible"					= "Invisible";
+
+//	Background texture names
+"Sky"		= "Ciel";
+"Wood"		= "Bois";
+"Grass"		= "Herbe";
+"Sand"		= "Sable";
+"Stone"		= "Pierre";
+"Tatami"	= "Tatami";
+"Moss"		= "Mousse";
+"Water"		= "Eau";
+"Straw"		= "Paille";
+
+//	OptionsView
+"Show Plain Images"				= "Afficher les images simples";
+"Show Reflected Images"			= "Afficher les images réfléchies";
+"Cut Along Mirror Lines"		= "Couper le long des droites de miroirs";
+"Snap to Archimedean Solids"	= "Basculer vers les solides d'Archimède";
+"Sound Effects"					= "Effets sonores";
+"Inertia"						= "Inertie";
+
+//	Archimedean polyhedra names
+"cube"							= "Cube";
+"cuboctahedron"					= "Cuboctaèdre";
+"dodecahedron"					= "Dodécaèdre";
+"icosahedron"					= "Icosaèdre";
+"icosidodecahedron"				= "Icosidodécaèdre";
+"octahedron"					= "Octaèdre";
+"rhombicosidodecahedron"		= "Petit rhombicosidodécaèdre";
+"rhombicuboctahedron"			= "Petit rhombicuboctaèdre";
+"truncated cuboctahedron"		= "Grand rhombicuboctaèdre";	//	ou "Cuboctaèdre tronqué"
+"truncated icosidodecahedron"	= "Grand rhombicosidodécaèdre";	//	ou "Icosidodécaèdre tronqué"
+"tetrahedron"					= "Tétraèdre";
+"truncated cube"				= "Cube tronqué";
+"truncated dodecahedron"		= "Dodécaèdre tronqué";
+"truncated icosahedron"			= "Icosaèdre tronqué";
+"truncated octahedron"			= "Octaèdre tronqué";
+"truncated tetrahedron"			= "Tétraèdre tronqué";

@@ -1,0 +1,1559 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>KaleidoTile Revision History</title>
+	<style type="text/css">
+		body		{background-color: #D0F0E0}
+		h1			{text-align: center; margin-top:  2pt; margin-bottom: 16pt; color: #0040C0}
+		h2			{text-align: center; margin-top: 16pt; margin-bottom:  2pt; color: #0040C0; font-style: italic}
+		td			{padding-bottom: 8pt}
+		table		{margin-left: auto; margin-right: auto; padding-left: 16pt;  padding-right: 16pt}
+		tr			{vertical-align: top}
+		td			{padding-left: 4pt;  padding-right: 4pt}
+		td.version	{font-weight: bold}
+		td.date		{text-align: center; font-style: italic; white-space: nowrap}
+		td.changes	{}
+		p			{padding-left: 1em; text-indent: -1em; margin-top: 0; margin-bottom: 0}
+		ul			{margin-top: 0; margin-bottom: 0}
+	</style>
+</head>
+
+<body>
+
+<h2>KaleidoTile</h2>
+
+<h1>Revision History</h1>
+
+<table>
+	<tr>
+		<td class="version"><i>4.4</i></td>
+		<td class="date">15 Dec 2025</td>
+		<td class="changes">
+			<p>
+				Zoom and crop images from camera.
+			</p>
+			<p>
+				Minor changes for better legibility on iOS/iPadOS/macOS 26.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i>4.3.1</i></td>
+		<td class="date">26 May 2025</td>
+		<td class="changes">
+			<p>
+				In macOS App Sandbox settings,
+				added read/write permission for user-selected files.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i>4.3.0</i></td>
+		<td class="date">23 May 2025</td>
+		<td class="changes">
+			<p>
+				Runs on macOS as well as iOS and iPadOS.
+			</p>
+			<p>
+				Exports PNG images as Mail, Messages, AirDrop, Save to Files, Copy, etc
+			</p>
+			<p>
+				Updated for iOS 17+
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i></i></td>
+		<td class="date">14 Nov 2024</td>
+		<td class="changes">
+			<p>
+				Full Swift 6 Concurrency.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i>4.2.2</i></td>
+		<td class="date">24 Feb 2024</td>
+		<td class="changes">
+			<p>
+				Added option to disable Inertia.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i>4.2.1</i></td>
+		<td class="date">7 Jan 2024</td>
+		<td class="changes">
+			<p>
+				Added German translation, thanks to Stas Drisner.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i>4.2.0</i></td>
+		<td class="date">10 May 2023</td>
+		<td class="changes">
+			<p>
+				Entire app re-written in Swift and SwiftUI.
+			</p>
+			<p>
+				Eliminates frame-by-frame retiling
+				for greatly reduced CPU load.
+				Instead it uses a fixed tiling,
+				and lets the tiling's orientation
+				to be alternately plain and reflected,
+				so that the "popping" around the perimeter
+				of the hyperbolic tiling becomes unnoticeable.
+			</p>
+			<p>
+				In the face decoration panel, a NavigationView
+				works fine on iPhone but fails completely 
+				on iPad (it fails differently on iPadOS 15 and 16,
+				but fails on both).  So I replaced 
+				the NavigationView (which is deprecated in iOS 16)
+				with a NavigationStack (which was first introduced
+				in iOS 16) and increased the deployment target to iOS 16.0.
+			</p>
+			<p>
+				Added "Image from Files"
+				to complement "Image from Photo Library"
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i>4.1.5</i></td>
+		<td class="date">17 May 2022</td>
+		<td class="changes">
+			<p>
+				<i>(macOS)</i>
+				Replaced the old Mac-specific KaleidoTile
+				(which relied on OpenGL graphics,
+				which Apple deprecated 4 years ago)
+				with a new MacCatalyst adaptation
+				of iOS KaleidoTile (which uses Metal graphics).
+			</p>
+			<p>
+				<i>(macOS)</i>
+				Let user save image to any folder, with any name
+				(not just to Photos Library).
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i></i></td>
+		<td class="date">16 May 2022</td>
+		<td class="changes">
+			<p>
+				<i>(iOS)</i>
+				Increased PICKER_DIGIT_WIDTH from 24.0 to 36.0
+				for compatibility with current iOS.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i></i></td>
+		<td class="date">19 Dec 2021</td>
+		<td class="changes">
+			<p>
+				<i>(legacy iOS)</i>
+				Changed iOS Deployment Target to iOS 14,
+				because Apple has stopped supporting iOS 12.
+				Thus, in particular, I no longer have
+				a maintainable iOS 12 device to test on.
+			</p>
+			<p>
+				<i>(legacy iOS)</i>
+				Added UINavigationBarAppearance so that
+				navigation bars will have an opaque background
+				when running on iOS 15.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"><i></i></td>
+		<td class="date">22 Nov 2020</td>
+		<td class="changes">
+			<p>
+				Changed various GPU uniforms, colors in buffers, etc.
+				to half-precision (__fp16 and faux_simd_half4) where appropriate.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">5 Nov 2020</td>
+		<td class="changes">
+			<p>
+				Removed workaround for bug that function-constant assignments like<br>
+				constant bool gFoo [[ function_constant(0) ]];<br>
+				constant bool gBar = ! gFoo;<br>
+				used to work as expected on iOS but fail on macOS.
+				They now work correctly on both OS’s.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">4.1.4</td>
+		<td class="date">30 Jun 2020</td>
+		<td class="changes">
+			<p>
+				Adapted color picker to use wide-color when available.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">30 Jun 2020</td>
+		<td class="changes">
+			<p>
+				Implemented -gestureRecognizerShouldBegin: to return NO,
+				to fix a bug that had allowed a drag in KaleidoTile's color picker
+				to get "stolen" and re-interpreted as a scroll of the enclosing popover.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">29 Jun 2020</td>
+		<td class="changes">
+			<p>
+				Replaced manual texture loading with Asset Catalogs and MTKTextureLoader.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">16 Apr 2020</td>
+		<td class="changes">
+			<p>
+				Renders to Wide Color (Display P3) when available.
+			</p>
+			<p>
+				Some of the shared code that won't be needed
+				in the upcoming SwiftUI versions of the Geometry Games apps
+				has been migrated to "-LEGACY" files, to allow
+				the SwiftUI versions to include desired utilities
+				without including legacy cruft like PixelRGBA, ImageRGBA, etc.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">4.1.3</td>
+		<td class="date">31 Mar 2020</td>
+		<td class="changes">
+			<p>
+				<i>(iOS)</i> Converted launch screen format from .xib to .storyboard
+				to comply with new App Store requirements.
+			</p>
+			<p>
+				<i>(iOS)</i> Toolbar self-adjusts at runtime to default height
+				for device (iPad or iPhone).  
+			</p>
+			<p>
+				<i>(iOS)</i> Made toolbar opaque to make it brighter.  
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">4.1.2</td>
+		<td class="date">8 Nov 2019</td>
+		<td class="changes">
+			<p>
+				Replaced functions deprecated in iOS 13 or macOS 10.15
+				with non-deprecated alternatives.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">4.1.1</td>
+		<td class="date">13 Jan 2019</td>
+		<td class="changes">
+			<p>
+				<i>(iOS)</i> Fixed bug to allow proper creation of mipmapped
+				power-of-two size textures (for example from the user's photo library)
+				on devices with 3× displays (for example on iPhone X).
+				Thanks to Bondy Palien for reporting this bug.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">4.1</td>
+		<td class="date">11 Nov 2018</td>
+		<td class="changes">
+			<p>
+				<i>(macOS)</i> Enabled Hardened Runtime to allow Notarization by Apple.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">17 Oct 2018</td>
+		<td class="changes">
+			<p>
+				<i>(iOS)</i> Table images, toolbar icons and other images
+				re-created at @1x, @2x and @3x.  Source files for those images
+				all simplified and tidied up (now mostly as iDraw files).
+			</p>
+			<p>
+				<i>(iOS)</i> Toolbar icons resized to 24pt,
+				which is the new recommended size.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">16 Sep 2018</td>
+		<td class="changes">
+			<p>
+				<i>(iOS)</i> Removed vestigial OpenGL ES code.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">30 Apr 2018</td>
+		<td class="changes">
+			<p>
+				<i>(macOS)</i> On multi-GPU systems, selects the GPU that's 
+				already running the displays attached to the main computer
+				(but ignores any externally attached removable GPUs).
+				If the system switches to a different GPU,
+				this app switches to that GPU as well.
+			</p>
+			<p>
+				<i>(macOS)</i> No longer calls
+				[[NSNotificationCenter defaultCenter] removeObserver:self]
+				because it's no longer necessary.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">4.0</td>
+		<td class="date">20 Apr 2018</td>
+		<td class="changes">
+			<p>
+				New:  KaleidoTile for iOS
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">20 Apr 2018</td>
+		<td class="changes">
+			<p>
+				Lets users decorate their polyhedra and tilings 
+				using images from their photo library 
+				or images taken directly with their device's camera
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">20 Apr 2018</td>
+		<td class="changes">
+			<p>
+				Graphics rewritten using Metal
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">14 Apr 2018</td>
+		<td class="changes">
+			<p>
+				<i>(macOS)</i> Main content view is now layer-backed.
+				When going fullscreen, avoids macOS 10.13.4 bug.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">28 Sep 2017</td>
+		<td class="changes">
+			<p>
+				CPU code consistently uses "double" (rather than "float")
+				for essentially everything.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">12 Dec 2016</td>
+		<td class="changes">
+			<p>
+				<i>(macOS)</i> Exports images as PNG instead of TIFF.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">6 Dec 2016</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Mac version is now Metal-only.
+				Reason:  The Mac OpenGL version of the Geometry Games
+				uses an older approach that would have been very time-consuming
+				to rewrite using a CAOpenGLLayer to bring it into line
+				with iOS OpenGL, iOS Metal and Mac Metal versions.
+				It hardly seemed worth investing that much time
+				into OpenGL code that would soon get phased out anyhow.
+				In any case, users of older Macs will always be able
+				to download an older, OpenGL-compatible version of each app.
+			</p>
+			<p>
+				<i>(Mac)</i> Given that the Mac version is now Metal-only,
+				it now requires macOS 10.12 or later.  Reason:  macOS 10.12
+				is the only version I can test the apps on, and I prefer
+				not to release an app for earlier versions of the operating system,
+				on which it's never been tested.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">30 Nov 2016</td>
+		<td class="changes">
+			<p>
+				Created a single project document
+				with targets for iOS and macOS.
+			</p>
+			<p>
+				Created that single project document from scratch,
+				to get rid of years of legacy cruft. 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">15 May 2016</td>
+		<td class="changes">
+			<p>
+				Separated OpenGL(ES)-specific data and code
+				from graphics-system-independent data and code,
+				in preparation for a migration from OpenGL(ES)
+				to Metal on iOS and Mac (and maybe eventually
+				to Vulkan on Android and to DX12 on Windows).
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.10</td>
+		<td class="date">20 Apr 2016</td>
+		<td class="changes">
+			<p>
+				Added Chinese translation,
+				thanks to 焦堂生 (Tangsheng Jiao).
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.9</td>
+		<td class="date">17 Nov 2015</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Updated code for Mac OS X 10.10,
+				replacing all deprecated method calls.
+				Requires OpenGL 3.3.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">12 Nov 2015</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Converted memory management
+				from Manual Retain-Release (MRR)
+				to Automatic Reference Counting (ARC).
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">16 Oct 2015</td>
+		<td class="changes">
+			<p>
+				Suppressed the Language menu to avoid displaying UniHan characters incorrectly
+				(and also because the Language menu wasn't really useful
+				except in the Torus Games). 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">12 Jan 2015</td>
+		<td class="changes">
+			<p>
+				Moved MIDI and WAV playback to shared code.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.8.2</td>
+		<td class="date">22 Aug 2014</td>
+		<td class="changes">
+			<p>
+				Further migration to Char16.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">21 Aug 2014</td>
+		<td class="changes">
+			<p>
+				Expanded visibility of OpenGL headers,
+				so the ModelData can refer to OpenGL objects as GLuint
+				instead of "unsigned int", thus improving clarity
+				and avoiding integer conversion warnings.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">20 Aug 2014</td>
+		<td class="changes">
+			<p>
+				Replaced L"…" → u"…" and L'·' → u'·'.
+				The L syntax required -fshort-wchar to get 16-bit wide characters
+				and generated copious warnings in Android,
+				while the u syntax is part of the C11 standard.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">19 Aug 2014</td>
+		<td class="changes">
+			<p>
+				Completed deferred maintenance of Windows version
+				(accommodated changes from last 15 months
+				when I had no Windows computer).
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">16 Dec 2013</td>
+		<td class="changes">
+			<p>
+				Handles localized text as UTF-16 instead of UTF-8.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.8.1</td>
+		<td class="date">16 May 2013</td>
+		<td class="changes">
+			<p>
+				<i>(Win)</i> Improved font quality (especially East Asian) on Windows Vista and newer.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.8</td>
+		<td class="date">9 May 2013</td>
+		<td class="changes">
+			<p>
+				First version requiring OpenGL 3.2 or OpenGL ES 2.0.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.7</td>
+		<td class="date">2 May 2013</td>
+		<td class="changes">
+			<p>
+				Last version compatible with OpenGL 2.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">24 Apr 2013</td>
+		<td class="changes">
+			<p>
+				<i>(Win)</i> Moved much functionality from
+				individual applications to shared code.
+			</p>
+			<p>
+				<i>(Win)</i> Simplified implementation of various features.  Removed cruft.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">8 Mar 2013</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Moved much functionality from
+				individual applications to shared code.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">5 Mar 2013</td>
+		<td class="changes">
+			<p>
+				Replaced platform-specific language lists 
+				with a single language list in app's common code.
+				Simplified language menu handling.
+			</p>
+			<p>
+				Moved endonyms and Win32 LANGIDs to Geometry Games shared code.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">28 Feb 2013</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Updated Objective-C syntax to use @{}, @[], @() and @autorelease.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">21 Nov 2012</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Re-organized instance variables,
+				moving them from .h to .m files (@interface to @implementation)
+				as allowed by the “new” Objective-C runtime.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.6.6</td>
+		<td class="date">2 Oct 2012</td>
+		<td class="changes">
+			<p>
+				<i>(Win)</i> To avoid bugs in Intel Integrated Graphics drivers,
+				ignores VAO extension and directs all OpenGL 2 users (on Windows)
+				to the legacy version of the program.
+			</p>
+			<p>
+				Simplified extensions handling.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">1 Jul 2012</td>
+		<td class="changes">
+			<p>
+				Instanced vertex attribute arrays work spectacularly well, 
+				so I eliminated USE_INSTANCED_TILING_ARRAY, making
+				the changes permanent.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">28 Jun 2012</td>
+		<td class="changes">
+			<p>
+				Portuguese menus and study questions
+				revised to conform to the Acordo Ortográfico of 1990,
+				which went into effect in 2009.
+			</p>
+		</td>
+	</tr>
+	</tr>
+		<tr>
+		<td class="version"></td>
+		<td class="date">12 Jun 2012</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> imageAsBitmapImageRepOfSize
+				rescales images larger than 1024×1024
+				when running with OpenGL 2 (on older computers),
+				but leaves the requested size unchanged
+				when running with OpenGL 3 (on mid-aged or newer computers).
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.6.5</td>
+		<td class="date">3 Feb 2012</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> imageAsBitmapImageRepOfSize no longer rejects sizes
+				greater than 1024×1024, but instead rescales the image.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">3 Feb 2012</td>
+		<td class="changes">
+			<p>
+				<i>(Win)</i> The application as a whole is now willing
+				to use the OpenGL 2 FBO extension for Copy/Save.
+				However, to ensure that all users get correct basic functionality,
+				it calls glGenerateMipmap only on OpenGL 3.3 or higher.
+				On OpenGL 3.2 or earlier it falls back 
+				to glTexParameteri(…, GL_GENERATE_MIPMAP, …)
+				to avoid buggy glGenerateMipmap implementations. 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.6.4</td>
+		<td class="date">20 Jan 2012</td>
+		<td class="changes">
+			<p>
+				First version to require Vertex Array Objects.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.6.3</td>
+		<td class="date">20 Jan 2012</td>
+		<td class="changes">
+			<p>
+				Last version to run without Vertex Array Objects.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">18 Jan 2012</td>
+		<td class="changes">
+			<p>
+				Disentangled Vertex Array Object (VAO) code
+				from Vertex Buffer Object (VBO) code.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">17 Jan 2012</td>
+		<td class="changes">
+			<p>
+				Stores tile placements on GPU as a VBO, which
+				gets read at render time as an "instanced vertex attribute"
+				(when available) for much faster rendering of deep hyperbolic tilings.
+				On my PC the frame rate increased from 4 fps to 51 fps
+				for a (2,3,7) tiling out to radius 6.5.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">16 Dec 2011</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Created an opaque ModelData typedef
+				and move much more functionality into the GeometryGamesView class
+				to reduce code duplication among different applications.								
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">5 Dec 2011</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Created a shared GeometryGamesView class
+				to reduce code duplication among different applications.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.6.2</td>
+		<td class="date">18 Nov 2011</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> The ModelData is now packaged as an Objective-C object.
+				The WindowController sees the ModelData and the View.
+				The View sees the ModelData.
+				This design goes against Apple's advice to let the Controller
+				mediate between the Model and the View
+				(as illustrated by the 2-way arrows in the figure
+				at developer.apple.com/technologies/mac/cocoa.html ),
+				but ultimately achieves much cleaner code.
+				As an added bonus, the pointers WindowController→ModelData,
+				WindowController→View and View→ModelData all point
+				in a consistent direction (no cycles), so they may all be
+				strong (retained) references.  There's no longer any need
+				for weak (non-retained) references.
+			</p>
+			<p>
+				<i>(Mac)</i> The Mac OS 10.6 style fullscreen mode
+				would switch the first responder to the WindowController,
+				regardless of what it had been previously.
+				Now that Mac OS 10.7 provides a far cleaner fullscreen mode
+				(and I've eliminated the 10.6 fullscreen mode entirely),
+				the first responder is the View, not the WindowController.
+				The View now handles all keystroke and mouse activity,
+				while the WindowController handles the menus.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">18 Nov 2011</td>
+		<td class="changes">
+			<p>
+				Enlarges/reduces Euclidean tiles correctly.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.6.1</td>
+		<td class="date">28 Jul 2011</td>
+		<td class="changes">
+			<p>
+				Korean added, thanks to 박하은.
+			</p>
+			<p>
+				<i>(Mac)</i> Uses OpenGL 3.2 on Mac OS 10.7.
+			</p>
+			<p>
+				<i>(Mac)</i> Mac OS 10.7 fullscreen mode support.
+			</p>
+			<p>
+				<i>(Mac)</i> Assorted small changes for Mac OS 10.7 compatibility.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">23 Jun 2011</td>
+		<td class="changes">
+			<p>
+				Wrote code to generating tilings via geometry shader,
+				but do not plan to release it until after testings
+				on Mac OS under Open GL 3.  (Under Windows it increases
+				the frame rate of deep hyperbolic tilings by an order
+				of magnitude, by eliminating the once-per-tile CPU-to-GPU call.
+				But it's actually a tiny bit slower than the old code
+				for x8 spherical tilings, where the per-vertex cost
+				is more important than the per-tile cost.
+				Also, there's a noticeable pause whenever it needs
+				to recompile its shaders -- to avoid that it could
+				precompile all possibile combinations.)
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">5 Jun 2011</td>
+		<td class="changes">
+			<p>
+				Chooses mesh refinement automatically.
+			</p>
+			<p>
+				Default hyperbolic tiling radius increased from 4.5 to 5.5.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">2 Jun 2011</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Pauses animation when hidden (⌘H).
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.6</td>
+		<td class="date">20 May 2011</td>
+		<td class="changes">
+			<p>
+				Public release of accumulated changes.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">April & May</td>
+		<td class="changes">
+			<p>
+				Lots of small improvements and maintenance,
+				which I got bored of recording in the revision histories.
+				Includes improvements to support older, buggier OpenGL drivers
+				as well as newer ones.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">29 Mar 2011</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> Rewrote user interface, replacing 
+				old single-class based architecture with simpler
+				and more logical AppDelegate/WindowController/View architecture.
+			</p>
+			<p>
+				<i>(Mac)</i> Replaced groups of related menu command handlers
+				with single tag-based handlers.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">15 Mar 2011</td>
+		<td class="changes">
+			<p>
+				Replaced 256×1 ControlPanelBackground.rgba
+				with equivalent 256×2 image.  On certain systems
+				(for example, Manual Arala Chaves' Win7 laptop)
+				the OpenGL driver has a bug that glGenerateMipmap()
+				fails to mark a 1-pixel high image as ready-for-use.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">14 Mar 2011</td>
+		<td class="changes">
+			<p>
+				<i>(Win)</i>  GeometryGames-Win32-LoadEntryPoints.c
+				loads entry points based on OpenGL version and
+				available extensions.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">10 Mar 2011</td>
+		<td class="changes">
+			<p>
+				Background texture scales according to intrinsic units.
+			</p>
+			<p>
+				Background texture rendered in 3D for spherical and Euclidean tilings.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">10 Mar 2011</td>
+		<td class="changes">
+			<p>
+				Archimedean name maintains aspect ratio even while window does not.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">10 Mar 2011</td>
+		<td class="changes">
+			<p>
+				Replaced cursor pushing/popping mechanism with plain setting,
+				to avoid problem that on first click it would revert
+				to a plain arrow.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">9 Mar 2011</td>
+		<td class="changes">
+			<p>
+				Added full-screen mode (publicly available).
+			</p>
+			<p>
+				Added dual-projector polarized stereo 3D,
+				for Manuel Arala Chaves at Atractor and 
+				Jouko Koskinen at Heureka.
+				It's not part of the public version.
+				To activate it, uncomment
+				#define RUN_DUAL_MONITOR_FULLSCREEN_STEREO_MAC
+				and/or
+				#define RUN_DUAL_MONITOR_FULLSCREEN_STEREO_WIN
+				and recompile.  Selecting "Full Screen" will still
+				give ordinary full-screen mode on a single-monitor system,
+				but on a dual-monitor system will give
+				dual-projector polarized stereo 3D.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">28 Feb 2011</td>
+		<td class="changes">
+			<p>
+				Moved SetUpOneShader() to shared code,
+				and simplified parameter handling.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">24 Feb 2011</td>
+		<td class="changes">
+			<p>
+				Replaced application-wide texture settings (for mipmapping, anisotropic filtering, etc.)
+				with per-texture settings.  The finer control lays the foundation
+				for iOS versions of the software, where trilinear mipmapping
+				and anisotropic filtering are computationally more expensive.
+			</p>
+			<p>
+				Moved SetUpOneTexture() to shared code.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">20 Feb 2011</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i> For rendering text into OpenGL textures,
+				replaced deprecated ATSUI functions
+				with new Core Text functions.
+			</p>
+			<p>
+				Replaced application-specific SetAlphaTextureFromString()
+				with shared SetAlphaTextureFromString().
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">15 Feb 2011</td>
+		<td class="changes">
+			<p>
+				Having Copy/Save Image read the back/front buffer
+				was a bit dicey, so Copy/Save Image now
+				draws into an offscreen buffer instead.
+				The new system has the flexibility to draw the image 
+				at any size, not necessarily the view size,
+				even though there's still no user interface 
+				to set a custom size.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">11 Feb 2011</td>
+		<td class="changes">
+			<p>
+				Extension checking moved to shared Geometry Games utilities.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">30 Jan 2011</td>
+		<td class="changes">
+			<p>
+				New, simpler algorithm for handing window dimensions.
+			</p>
+			<p>
+				Eliminates ResizeGLView().
+			</p>
+			<p>
+				Handles mouse movements correctly
+				even when aspect ratio isn't 5:4.
+			</p>
+			<p>
+				Control panel maintains 1:4 aspect ratio
+				whenever the window's width is at least half its height.
+			</p>
+			<p>
+				Removed and archived Preferences panel.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">23 Jan 2011</td>
+		<td class="changes">
+			<p>
+				Uses shared GeometryGames-OpenGL.h.
+			</p>
+			<p>
+				Graphics code made OpenGL ES compatible.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">20 Jan 2011</td>
+		<td class="changes">
+			<p>
+				Removed GeoWall support (could eventually get replaced
+				with dual-projector full-screen mode if needed).  
+			</p>
+			<p>
+				Added greyscale vs. color anaglyphic 3D.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">12 Nov 2010</td>
+		<td class="changes">
+			<p>
+				Replaced version-based runtime choices
+				with extension-based runtime choices.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">10 Nov 2010</td>
+		<td class="changes">
+			<p>
+				Uses shared Geometry Games utilities.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">7 Jul 2010</td>
+		<td class="changes">
+			<p>
+				VAO usage now controlled by extension availability
+				instead of version number.  This allows greater VAO usage,
+				but more importantly it simplifies the code
+				by eliminating lots of #ifdef/#else/#endif blocks.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.5.2</td>
+		<td class="date">22 Jun 2010</td>
+		<td class="changes">
+			<p>
+				Added Italian translation, thanks to Angelo Contardi.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">4 Jun 2010</td>
+		<td class="changes">
+			<p>
+				Removed Smooth Edges from menu and preference panel.
+				Multisample now gets used iff the program wants it
+				and the host computer provides it.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">3 Jun 2010</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i>
+				Minor changes:
+			</p>
+			<ul>
+				<li>
+					Saved NIB file as XIB file.
+				</li>
+				<li>
+					XIB file declares main view as subclass of NSOpenGLView
+					instead of subclass of NSView, which lets us
+					set the pixel format in Interface Builder,
+					and also affects what initializer get called.
+				</li>
+				<li>
+					Removed hack from reshape method (no longer needed).
+				</li>
+				<li>
+					Removed windowWillMiniaturize method
+					(the hack it contained is no longer needed).
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">30 May 2010</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i>
+				Includes copy of gl3.h bundled with source code.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">10 May 2010</td>
+		<td class="changes">
+			<p>
+				Added glBindVertexArray(0) call to PrepTriangleVAOs().
+				No problems had arisen without it, but nevertheless
+				it seems safer to include that call.
+			</p>
+			<p>
+				Added glBindBuffer(..., 0) calls at very end of PrepTriangleVAOs().
+				Again no problems had arisen, but it seems safer.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.5.1</td>
+		<td class="date">6 May 2010</td>
+		<td class="changes">
+			<p>
+				<i>(Win)</i>
+				Corrected "Save As" function to repaint window before saving image.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.5</td>
+		<td class="date">3 May 2010</td>
+		<td class="changes">
+			<p>
+				Revised graphics code OpenGL 2.0 → OpenGL 3.0.
+				Compiles against the forward-compatible gl3.h
+				instead of the backward-compatible gl.h.
+			</p>
+			<p>
+				Removed all fixed-function (OpenGL 1) graphics code.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.4<br>OpenGL 1<br>archive</td>
+		<td class="date">27 Apr 2010</td>
+		<td class="changes">
+			<p>
+				Changed<br>
+				"Rhombitruncated Cuboctahedron" → "Truncated Cuboctahedron"<br>
+				"Rhombitruncated Icosidodecahedron" → "Truncated Icosidodecahedron"<br>
+				and similarly in other languages (excluding French, which
+				retains the grand/petit forms).
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">26 Apr 2010</td>
+		<td class="changes">
+			<p>
+				Removed spoken polyhedron names.
+				They really weren't so important,
+				and they presented an obstacle to revising
+				the polyhedron names in English, 
+				as well as an ongoing burden to people
+				translating KaleidoTile into other languages.
+			</p>
+			<p>
+				Removed the option to show or not show
+				the Archimedean polyhedron names.
+				Now they always get shown.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">12 Jan 2010</td>
+		<td class="changes">
+			<p>
+				Moved all colors from plain (r,g,b,α)
+				to premultiplied (αr, αg, αb, α)
+				for rigorous transparency, eliminating all artifacts,
+				and correct mipmap generation.
+				Accepts premultiplied or nonpremultiplied 
+				pasted images on Mac.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">5 Dec 2009</td>
+		<td class="changes">
+			<p>
+				Reorganized texture management.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">19 Nov 2009</td>
+		<td class="changes">
+			<p>
+				Added side-by-side stereoscopic 3D for display
+				on polarized lens systems like GeoWall.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">19 Nov 2009</td>
+		<td class="changes">
+			<p>
+				Improved handling of non-square tiling panel.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">16 Nov 2009</td>
+		<td class="changes">
+			<p>
+				Revised ResizeGLView() for greater flexibility.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">26 Oct 2009</td>
+		<td class="changes">
+			<p>
+				<i>(Win)</i>
+				Simplified loading of Open GL entry points.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.3</td>
+		<td class="date">19 Oct 2009</td>
+		<td class="changes">
+			<p>
+				Reorganized drawing code to use programmable vertex and fragment shaders (OpenGL 2.0)
+				instead of old-style fixed function pipeline (OpenGL 1.5).
+				New code uses generic vertex attributes for forward compatibility with OpenGL 3.2.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">20 Sep 2009</td>
+		<td class="changes">
+			<p>
+				<i>(Mac)</i>
+				Migrated NSString literals with UTF-8 to newer, simpler format.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">17 Sep 2009</td>
+		<td class="changes">
+			<p>
+				Rewrote menu translation code for Mac OS 10.6 compatibility.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.2.2</td>
+		<td class="date">19 May 2009</td>
+		<td class="changes">
+			<p>
+				Added user-adjustable hyperbolic tiling depth.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">16 May 2009</td>
+		<td class="changes">
+			<p>
+				Moved responsibility for requesting a display redraw
+				from platform-dependent code to platform-independent code.
+			</p>
+			<p>
+				Minor changes for OpenGL ES compatibility.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">4 May 2009</td>
+		<td class="changes">
+			<p>
+				Minor maintenance on Win32 user interface
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.2.1</td>
+		<td class="date">22 Apr 2009</td>
+		<td class="changes">
+			<p><i>(Win)</i>  If KaleidoTile
+			fails to load a post-OpenGL 1.1 function
+			under its permanent name (e.g. "glBindBuffer"),
+			it looks for it under its former
+			extension name (e.g. "glBindBufferARB").</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.2</td>
+		<td class="date">7 Apr 2009</td>
+		<td class="changes">
+			<p>Added user-controlled scale factor for Euclidean tilings.</p>
+			<p>Added data persistence ("user prefs" on Mac,
+			"registry keys" on Windows) so KaleidoTile now remembers
+			the multisampling ("Smooth Edges") setting 
+			from a previous session.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">6 Apr 2009</td>
+		<td class="changes">
+			<p>Replaced quadratic-time tiling algorithm with linear-time tiling algorithm.
+			Tiles in real time, with no precomputed matrices.
+			Enforces cutoff distance relative to current tiling position,
+			so as the tiling moves, the boundary tiles pop in and out one at a time,
+			not en masse.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">14 Mar 2009</td>
+		<td class="changes">
+			<p>Reorganized drawing code to use Vertex Buffer Objects
+			instead of display lists, because displays lists are
+			deprecated in standard OpenGL and don't exist at all
+			in OpenGL ES.  New drawing code almost doubles the frame rate
+			for large hyperbolic tilings (e.g. from 19fps to 34fps).</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">13 Mar 2009</td>
+		<td class="changes">
+			<p>Changed projection matrix to show hyperbolic tilings
+			in Poincaré disk model rather than from the more limited
+			inside-the-hyperboloid viewpoint.  When KaleidoTile was first written,
+			standard consumer PCs and Macs weren't fast enough to handle
+			the Poincaré disk in real time, but now they are.</p>
+			<p>Changed coordinate conventions so that KaleidoTile looks down
+			the positive z-axis instead of the negative z-axis.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">10 Feb 2009</td>
+		<td class="changes">
+			<p>Simplified default language initialization on Mac OS X,
+				eliminating LanguageCode.strings files.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.1.4</td>
+		<td class="date">20 Jan 2009</td>
+		<td class="changes">
+			<p>Added Welsh 
+			(thanks to Uned Gyfieithu Prifysgol Bangor).</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.1.3</td>
+		<td class="date">4 Nov 2008</td>
+		<td class="changes">
+			<p>Suppressed needless backface calls 
+			for flat and hyperbolic tilings.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">31 Oct 2008</td>
+		<td class="changes">
+			<p>Removed depth buffer.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">19 Oct 2008</td>
+		<td class="changes">
+			<p>No longer suppresses background when Cut Along Mirror Lines is enabled.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version"></td>
+		<td class="date">17 Oct 2008</td>
+		<td class="changes">
+			<p>Avoids calling ErrorMessage() when the OpenGL context is active.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.1.2</td>
+		<td class="date">8 Oct 2008</td>
+		<td class="changes">
+			<p>Provides a clear explanation if the application 
+			gets separated from its supporting files.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.1.1</td>
+		<td class="date">3 Oct 2008</td>
+		<td class="changes">
+			<p>Smooth Edges disabled by default, for better performance on low-end computers</p>
+			<p>More efficient algorithm for pasting images into KaleidoTile on Mac OS X</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.1.0</td>
+		<td class="date">8 Sep 2008</td>
+		<td class="changes">
+			<p>Completely re-written user interface
+				<ul>
+					<li>
+						runs on Mac OS X as well as on Windows,
+					</li>
+					<li>
+						for each language, a single platform-independent file
+						contains all localized strings,
+					</li>
+					<li>
+						the Windows version no longer needs separate
+						.rc and .dll files for each language,
+					</li>
+					<li>
+						the Mac OS X version needs
+						no language-specific NIB files.
+					</li>
+				</ul>
+			</p>
+			<p>Background fully user-customizable,
+			with color, stock image, or user-provided image.</p>
+			<p>Suspends continuous redraw when display is static.</p>
+			<p>Added Japanese, thanks to Tatsu Takeuchi.</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.0.2</td>
+		<td class="date">15 Nov 2007</td>
+		<td class="changes">
+			<p>Added Portuguese (thanks to 
+			<a href="http://www.atractor.pt">Atractor</a>).</p>
+			<p>[Note:  3.0.2 was built using old KaleidoTile code,
+			while new code is under development.]</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.0.1</td>
+		<td class="date">14 Apr 2007</td>
+		<td class="changes">
+			<p>Added French (thanks to Jean-Michel Celibert).</p>
+			<p>Suspends frame rate measurement while minimized.</p>
+			<p>Switched to gcc compiler with CodeBlocks IDE.</p>
+			<p>Minor internal changes.</p>
+			<p>[Note:  3.0.1 was built using old KaleidoTile code,
+			while new code is under development.]</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="version">3.0.0</td>
+		<td class="date">18 Nov 2005</td>
+		<td class="changes">
+			<p>Initial KaleidoTile 3 release.</p>
+			<p>Completely re-written using OpenGL graphics.</p>
+			<p>Improved user interface.</p>
+			<p>Full support for current-generation 3D graphics cards.</p>
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+//	Program:
+//		KaleidoTile
+//
+//	Language:
+//		한국어
+//		Korean
+//
+//	Translator:
+//		박하은
+//		Ha-eun Park
+//
+//	Date:
+//		July 2011
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "대칭";
+"Triangle group △(%lld, %lld, %lld)"		= "삼각군 △(%lld, %lld, %lld)";
+"Other triangle group"					= "다른 삼각군";
+"Style"									= "스타일";
+"Polyhedron"							= "다면체";
+"Tiling of sphere"    					= "구면 타일링";
+"Tiling of Euclidean plane"				= "유클리드 평면 타일링";
+"Tiling of hyperbolic plane"			= "쌍곡 평면 타일링";
+
+//	FacesView
+"Decoration"	= "장식";
+"Face A"		= "표면 A";
+"Face B"		= "표면 B";
+"Face C"		= "표면 C";
+"Background"	= "배경";
+
+//	FaceDecorationView
+"Solid Color 1"				= "단색";	//	one line only
+"Solid Color 2"				= "단색";	//	two lines, if appropriate
+"Image from Camera"			= "카메라의\n이미지";
+"Image from Photo Library"	= "사진 보관함의\n이미지";
+	//	The expression "사진 보관함" gets used extensively in Apple's documentation pages.
+"Image from Files"			= "파일앱의\n이미지";
+"Paste Image"				= "이미지\n붙여넣기";
+"Previous Image"			= "이전의\n이미지";
+"Invisible"					= "투명하게";
+	//	Haeun says:
+	//		'투명한' is a correct word. And '투명하게' is the same word as '투명하'.
+	//		But I changed the ending for grammatical reason.
+
+//	Background texture names
+"Sky"		= "하늘";
+"Wood"		= "나무";
+"Grass"		= "잔디";
+"Sand"		= "모래";
+"Stone"		= "돌";
+"Tatami"	= "장판";	//	= "flooring" in this case
+"Moss"		= "이끼";
+"Water"		= "물";
+"Straw"		= "짚";
+
+//	OptionsView
+"Show Plain Images"				= "기본 이미지 보기";
+"Show Reflected Images"			= "반영된 이미지 보기";
+"Cut Along Mirror Lines"		= "거울선 숨기기";
+"Snap to Archimedean Solids"	= "아르키메데스의 다면체 움직이기";
+"Sound Effects"					= "음향효과";
+"Inertia"						= "관성";
+
+//	Archimedean polyhedra names
+"cube"							= "정육면체";
+"cuboctahedron"					= "육팔면체";
+"dodecahedron"					= "정십이면체";
+"icosahedron"					= "정이십면체";
+"icosidodecahedron"				= "십이이십면체";
+"octahedron"					= "정팔면체";
+"rhombicosidodecahedron"		= "부풀린 십이이십면체";
+"rhombicuboctahedron"			= "부풀린 육팔면체";
+"truncated cuboctahedron"		= "깎은 육팔면체";
+"truncated icosidodecahedron"	= "깎은 십이이십면체";
+"tetrahedron"					= "정사면체";
+"truncated cube"				= "깎은 정육면체";
+"truncated dodecahedron"		= "깎은 정십이면체";
+"truncated icosahedron"			= "깎은 정이십면체";
+"truncated octahedron"			= "깎은 정팔면체";
+"truncated tetrahedron"			= "깎은 정사면체";

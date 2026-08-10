@@ -1,0 +1,95 @@
+//	Program:
+//		English name:  KaleidoTile
+//		Chinese name:  萬花鏡
+//
+//	Language:
+//		繁體中文
+//		Chinese (Mandarin, traditional characters)
+//
+//	Translator:
+//		焦堂生
+//      Tangsheng Jiao
+//
+//	Date:
+//		April 2016
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "對稱";
+"Triangle group △(%lld, %lld, %lld)"		= "三角群 △(%lld, %lld, %lld)";
+"Other triangle group"					= "別的三角群";
+"Style"									= "模式";
+"Polyhedron"							= "多面體";
+"Tiling of sphere"    					= "球形表面的鑲嵌";
+	//	lit. "tiling of spherical surface";
+	//	焦堂生 prefers this over "球面的鑲嵌"
+"Tiling of Euclidean plane"				= "平坦表面的鑲嵌";
+	//	lit. "tiling of flat surface";
+	//	焦堂生 prefers this over "平面的鑲嵌" or "平直表面的鑲嵌"
+"Tiling of hyperbolic plane"			= "雙曲表面的鑲嵌";
+	//	lit. "tiling of hyperbolic surface";
+	//	焦堂生 prefers this over "雙曲面的鑲嵌"
+
+//	FacesView
+"Decoration"	= "裝飾";
+"Face A"		= "面Ａ";
+"Face B"		= "面Ｂ";
+"Face C"		= "面Ｃ";
+"Background"	= "背景";
+
+//	FaceDecorationView
+"Solid Color 1"				= "純色";	//	one line only
+"Solid Color 2"				= "純色";	//	two lines, if appropriate
+"Image from Camera"			= "來自相機\n的圖片";
+"Image from Photo Library"	= "照片庫中\n的圖片";
+"Image from Files"			= "來自檔案系統\n的圖片";
+	//	zh-Hans uses 文件 (document)
+	//	zh-Hant uses 檔案 (file)
+	//	For "file system" article on Wikipedia
+	//		文件系统  (zh-Hans)
+	//		檔案系統  (zh-Hant)
+"Paste Image"				= "貼上圖片";
+	//	zh-Hans uses 粘贴 (paste)
+	//	zh-Hant uses 貼上 (affix)
+"Previous Image"			= "上一張圖片";
+"Invisible"					= "隱藏";	//	"看得見的/看不見的" or "顯示/隱藏"
+
+//	Background texture names
+"Sky"		= "天空";
+"Wood"		= "木質";	//	焦堂生 says that while "木頭" is OK,
+						//		"woodiness" = "木質" is often used in textures
+"Grass"		= "青草";
+"Sand"		= "沙子";
+"Stone"		= "岩石";
+"Tatami"	= "榻榻米";
+"Moss"		= "青苔";	//	焦堂生 says that "青苔" and "苔蘚" are both OK
+"Water"		= "水";
+"Straw"		= "秸稈";
+
+//	OptionsView
+"Show Plain Images"				= "顯示原始圖像";
+"Show Reflected Images"			= "顯示反射圖像";
+"Cut Along Mirror Lines"		= "沿著鏡線切割";
+"Snap to Archimedean Solids"	= "阿基米德立體快照";
+"Sound Effects"					= "聲音效果";
+"Inertia"						= "慣性";
+
+//	Archimedean polyhedra names
+"cube"							= "立方體";
+"cuboctahedron"					= "截半立方體";
+"dodecahedron"					= "正十二面體";
+"icosahedron"					= "正二十面體";
+"icosidodecahedron"				= "截半二十面體";
+"octahedron"					= "正八面體";
+"rhombicosidodecahedron"		= "斜方截半二十面體";
+"rhombicuboctahedron"			= "斜方截半立方體";
+"truncated cuboctahedron"		= "截頂截半立方體";
+"truncated icosidodecahedron"	= "截頂截半二十面體";
+"tetrahedron"					= "正四面體";
+"truncated cube"				= "截頂立方體";
+"truncated dodecahedron"		= "截頂十二面體";
+"truncated icosahedron"			= "截頂二十面體";
+"truncated octahedron"			= "截頂八面體";
+"truncated tetrahedron"			= "截頂四面體";

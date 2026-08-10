@@ -1,0 +1,85 @@
+//	Program:
+//		KaleidoTile
+//
+//	Language:
+//		Cymraeg
+//		Welsh
+//
+//	Translators:
+//		Uned Gyfieithu Prifysgol Bangor
+//		Bangor University Translation Unit
+//	  and
+//		Gareth Roberts
+//
+//	Date:
+//		January 2009
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "Cymesuredd";
+"Triangle group △(%lld, %lld, %lld)"		= "Grŵp triongl △(%lld, %lld, %lld)";
+"Other triangle group"					= "Grŵp triongl arall";
+"Style"									= "Arddull";
+"Polyhedron"							= "Polyhedron";
+"Tiling of sphere"    					= "Teils ar ffurf sffêr";
+"Tiling of Euclidean plane"				= "Teils ar ffurf plân Ewclidaidd";
+"Tiling of hyperbolic plane"			= "Teils ar ffurf plân hyperbolig";
+
+//	FacesView
+"Decoration"	= "Addurniad";
+"Face A"		= "Wyneb A";
+"Face B"		= "Wyneb B";
+"Face C"		= "Wyneb C";
+"Background"	= "Cefndir";
+
+//	FaceDecorationView
+"Solid Color 1"				= "Lliw soletr";	//	one line only
+"Solid Color 2"				= "Lliw\nsoletr";	//	two lines, if appropriate
+"Image from Camera"			= "Delwedd o'r\ncamera";
+"Image from Photo Library"	= "Delwedd o'r\nLlyfrgell Luniau";
+"Image from Files"			= "Delwedd o'r\nffeiliau";
+"Paste Image"				= "Gludo\ndelwedd";
+"Previous Image"			= "Delwedd\nflaenorol";
+"Invisible"					= "Anweledig";
+
+//	Background texture names
+"Sky"		= "Awyr";	//	Gareth says the synonym 'wybr'
+						//		"has a certain Dickensian flavour to it".
+"Wood"		= "Pren";	//	Gareth says the synonym 'coed' "can also mean woods,
+						//		as in to go for a walk in the woods;
+						//		in this context, 'pren' is correct".
+"Grass"		= "Glaswellt";
+"Sand"		= "Tywod";
+"Stone"		= "Carreg";
+"Tatami"	= "Tatami";	//	Gareth says same spelling as in English.
+"Moss"		= "Mwsogl";	//	Gareth says the singular is correct, as in English.
+"Water"		= "Dŵr";	//	Gareth says the synonym 'dwfr' "feels more Biblical".
+"Straw"		= "Gwellt";
+
+//	OptionsView
+"Show Plain Images"				= "Dangos delweddau plaen";
+"Show Reflected Images"			= "Dangos delweddau adlewyrchedig";
+"Cut Along Mirror Lines"		= "Torri ar hyd y llinellau drych";
+"Snap to Archimedean Solids"	= "Snapio i solidau Archimedeaidd";
+"Sound Effects"					= "Effeithiau Sain";
+"Inertia"						= "Inertia";
+
+//	Archimedean polyhedra names
+"cube"							= "ciwb";
+"cuboctahedron"					= "ciwboctahedron";
+"dodecahedron"					= "dodecahedron";
+"icosahedron"					= "icosahedron";
+"icosidodecahedron"				= "icosidodecahedron";
+"octahedron"					= "octahedron";
+"rhombicosidodecahedron"		= "rhombicosidodecahedron";
+"rhombicuboctahedron"			= "rhombicuboctahedron";
+"truncated cuboctahedron"		= "ciwboctahedron blaendor";
+"truncated icosidodecahedron"	= "icosidodecahedron blaendor";
+"tetrahedron"					= "tetrahedron";
+"truncated cube"				= "ciwb blaendor";
+"truncated dodecahedron"		= "dodecahedron blaendor";
+"truncated icosahedron"			= "icosahedron blaendor";
+"truncated octahedron"			= "octahedron blaendor";
+"truncated tetrahedron"			= "tetrahedron blaendor";

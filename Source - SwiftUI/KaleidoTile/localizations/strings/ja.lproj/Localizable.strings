@@ -1,0 +1,131 @@
+//	Program:
+//		KaleidoTile
+//		万華鏡タイル
+//
+//	Language:
+//		日本語
+//		Japanese
+//
+//	Translator:
+//		竹内　建
+//		Tatsu Takeuchi
+//
+//	Date:
+//		August 2008
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "対称性";
+"Triangle group △(%lld, %lld, %lld)"		= "三角群 △(%lld, %lld, %lld)";
+"Other triangle group"					= "他の三角群";	//	Tatsu says:
+									//	「別の」would not be incorrect, but I feel
+									//	「他の」is more natural in this context.
+"Style"									= "面モード";
+"Polyhedron"							= "多面体";
+"Tiling of sphere"    					= "球面分割";
+					//	lit. "division of spherical surface" (see Note #1 below)
+"Tiling of Euclidean plane"				= "平面分割";
+					//	lit. "division of flat plane"
+"Tiling of hyperbolic plane"			= "双曲面分割";
+					//	lit. "division of hyperbolic plane" (see Note #2 below)
+	//	Note #1.
+	//	Regarding terms like「平面充填」that one finds on the web,
+	//	Tatsu says that
+	//
+	//		「充填」literally means "filling" and I think it is implicit
+	//		that what is being filled is infinitely large.
+	//		So I do not think it would quite work for a sphere
+	//		which only has a finite surface.  Indeed, I did a search
+	//		on the web for 「球面充填」and could not find the term.
+	//
+	//	The term is also technical and non-mathematicians would not be familiar
+	//	with this particular usage.  The only other place I've seen this word used
+	//	is in SciFi movies and anime when they are referring to filling up
+	//	a spaceship engine or weapon with energy, and the connotation there
+	//	is "to replenish" rather than "to fill."
+	//
+	//	Also, the second Kanji in the word is not that commonly used
+	//	so many people would not be able read it.
+	//
+	//	So I think「分割」is better since 1) that would apply to the sphere also,
+	//	2) it can be read by everyone and can be understood by everyone.
+	//
+	//	Note #2
+	//	Tatsu says:
+	//	For the plane and hyperbolic cases, please use:
+	//
+	//		「平面分割」＝division of flat plane
+	//		「双曲面分割」＝division of hyperbolic plane
+	//
+	//	My own commentary:
+	//	On the one hand,「双曲面」seems to mean "hyperboloid",
+	//	while the Japanese translation of The Shape of Space
+	//	uses「双曲平面」to mean "hyperbolic plane".
+	//	On the other hand, Tatsu's usage of「双曲面」for "hyperbolic plane"
+	//	avoids the kanji「平」, whose literal meaning is "flat",
+	//	and in any case, given that KaleidoTile models the hyperbolic plane
+	//	using the hyperboloid model in Minkowski space, the possible
+	//	mis-interpretation as "division of hyperboloid" is completely harmless.
+
+//	FacesView
+"Decoration"	= "装飾";
+"Face A"		= "面Ａ";
+"Face B"		= "面Ｂ";
+"Face C"		= "面Ｃ";
+"Background"	= "背景";
+
+//	FaceDecorationView
+"Solid Color 1"				= "ソリッドカラー";		//	one line only (no need for '・')
+"Solid Color 2"				= "ソリッド\nカラー";	//	two lines, if appropriate
+"Image from Camera"			= "カメラ\nからの画像";
+"Image from Photo Library"	= "フォトライブラリ\nからの画像";
+"Image from Files"			= "ファイル\nからの画像";
+"Paste Image"				= "画像を\nペースト";
+"Previous Image"			= "前の画像";
+"Invisible"					= "表示しない";	//	lit. "do not show".  Tatus says:
+	//	「表示しない」= do not render.
+	//	「みえない」means "cannot be seen" which does not necessarily
+	//				mean that the object is transparent.
+	//	「透明」means "lets light pass through" and does not necessarily
+	//				mean that it is invisible.
+	//	「無色透明」(colorless and transparent) would mean invisible,
+	//				but can be confusing.
+
+//	Background texture names
+"Sky"		= "空";
+"Wood"		= "木";
+"Grass"		= "草";
+"Sand"		= "砂";
+"Stone"		= "石";
+"Tatami"	= "畳";
+"Moss"		= "苔";
+"Water"		= "水";
+"Straw"		= "藁";
+
+//	OptionsView
+"Show Plain Images"				= "基本領域の非鏡映像を表示";
+"Show Reflected Images"			= "基本領域の鏡映像を表示";
+"Cut Along Mirror Lines"		= "鏡映線を表示";
+"Snap to Archimedean Solids"	= "ぴったり正多角形にする";
+"Sound Effects"					= "効果音";
+"Inertia"						= "慣性";
+
+//	Archimedean polyhedra names
+"cube"							= "正六面体　または　立方体";
+"cuboctahedron"					= "立方八面体";
+"dodecahedron"					= "正十二面体";
+"icosahedron"					= "正二十面体";
+"icosidodecahedron"				= "二十・十二面体";
+"octahedron"					= "正八面体";
+"rhombicosidodecahedron"		= "斜方二十・十二面体";
+"rhombicuboctahedron"			= "斜方立方八面体";
+"truncated cuboctahedron"		= "斜方切頂立方八面体";
+"truncated icosidodecahedron"	= "斜方切頂二十・十二面体";
+"tetrahedron"					= "正四面体";
+"truncated cube"				= "切頂六面体";
+"truncated dodecahedron"		= "切頂十二面体";
+"truncated icosahedron"			= "切頂二十面体";
+"truncated octahedron"			= "切頂八面体";
+"truncated tetrahedron"			= "切頂四面体";

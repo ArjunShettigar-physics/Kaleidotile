@@ -1,0 +1,79 @@
+//	Program:
+//		KaleidoTile
+//
+//	Language:
+//		English
+//		English
+//
+//	Translator:
+//		N/A
+//
+//	Date:
+//		N/A
+//
+//	© 2025 by Jeff Weeks
+//	See TermsOfUse.txt
+
+//	SymmetryAndStyleView
+"Symmetry"								= "Symmetry";
+"Triangle group △(%lld, %lld, %lld)"		= "Triangle group △(%lld, %lld, %lld)";
+"Other triangle group"					= "Other triangle group";
+"Style"									= "Style";
+"Polyhedron"							= "Polyhedron";
+"Tiling of sphere"    					= "Tiling of sphere";
+"Tiling of Euclidean plane"				= "Tiling of Euclidean plane";
+"Tiling of hyperbolic plane"			= "Tiling of hyperbolic plane";
+
+//	FacesView
+"Decoration"	= "Decoration";
+"Face A"		= "Face A";
+"Face B"		= "Face B";
+"Face C"		= "Face C";
+"Background"	= "Background";
+
+//	FaceDecorationView
+"Solid Color 1"				= "Solid Color";	//	one line only
+"Solid Color 2"				= "Solid\nColor";	//	two lines, if appropriate
+"Image from Camera"			= "Image from\nCamera";
+"Image from Photo Library"	= "Image from\nPhoto Library";
+"Image from Files"			= "Image from\nFiles";
+"Paste Image"				= "Paste\nImage";
+"Previous Image"			= "Previous\nImage";
+"Invisible"					= "Invisible";
+
+//	Background texture names
+"Sky"		= "Sky";
+"Wood"		= "Wood";
+"Grass"		= "Grass";
+"Sand"		= "Sand";
+"Stone"		= "Stone";
+"Tatami"	= "Tatami";
+"Moss"		= "Moss";
+"Water"		= "Water";
+"Straw"		= "Straw";
+
+//	OptionsView
+"Show Plain Images"				= "Show Plain Images";
+"Show Reflected Images"			= "Show Reflected Images";
+"Cut Along Mirror Lines"		= "Cut Along Mirror Lines";
+"Snap to Archimedean Solids"	= "Snap to Archimedean Solids";
+"Sound Effects"					= "Sound Effects";
+"Inertia"						= "Inertia";
+
+//	Archimedean polyhedra names
+"cube"							= "Cube";
+"cuboctahedron"					= "Cuboctahedron";
+"dodecahedron"					= "Dodecahedron";
+"icosahedron"					= "Icosahedron";
+"icosidodecahedron"				= "Icosidodecahedron";
+"octahedron"					= "Octahedron";
+"rhombicosidodecahedron"		= "Rhombicosidodecahedron";
+"rhombicuboctahedron"			= "Rhombicuboctahedron";
+"truncated cuboctahedron"		= "Truncated Cuboctahedron";
+"truncated icosidodecahedron"	= "Truncated Icosidodecahedron";
+"tetrahedron"					= "Tetrahedron";
+"truncated cube"				= "Truncated Cube";
+"truncated dodecahedron"		= "Truncated Dodecahedron";
+"truncated icosahedron"			= "Truncated Icosahedron";
+"truncated octahedron"			= "Truncated Octahedron";
+"truncated tetrahedron"			= "Truncated Tetrahedron";
